@@ -1,0 +1,6 @@
+-> Accounts own private keys that sign transactions/smart-contracts, to ensure the transaction is coming from the owner of the account.
+
+-> Each Ethereum node uses public-key to verify that the transaction came from the owner, if valid then the transaction is executed in the EVM [Ethereum Virtual Machine].
+
+
+

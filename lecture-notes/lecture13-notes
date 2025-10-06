@@ -1,0 +1,4 @@
+
+-> Read Only Calls (view, pure) don't use Gas, because they don't change the state of the Block-Chain, you can call it off chain using your wallet.
+   - You locally run it, without broadcasting it on the chain.
+

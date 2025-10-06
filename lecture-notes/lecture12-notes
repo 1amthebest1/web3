@@ -1,0 +1,62 @@
+-> Byte-Code: Byte-Code is like machine code, for virtual machines.
+	
+	- In hexadecimal.
+	- Cross-Platform [Same Byte Code can run in Windows, Linux etc].
+
+-> EVM: Byte Code, that ethereum Virtual Machine Runs.
+
+-> Mining: 
+
+	- Miner takes transactions waiting to be confirmed, the previous block's hash, metadata, and a random number called nonce (a 32-bit number miners can change).
+	- combine them, and put it into a SHA256 function.
+	- The result is a hash, a long hexadecimal number.
+	- If the number's leading zeros (means the number is smaller, or equal to the difficulty target of the block) matches the zeros of the difficulty target then the block is found.
+	- In Bitcoin, the difficulty target is adjusted every 2016 blocks (~2 weeks).
+	- The goal: make sure one block is mined every ~10 minutes, regardless of how much total computing power (hash rate) the network has. 
+	- If miners are finding blocks too quickly, → difficulty increases (target gets smaller → more zeros required).
+	- If blocks are found too slowly, → difficulty decreases (target gets larger → fewer zeros).
+
+-> You can choose any nonce you want, but you can't predict the SHA256 outcome.
+
+-> When a miner finds a valid nonce and thus a valid block, they get a block reward + transaction fees. 
+	
+	- Current reward (as of 2025):
+
+	- Block reward: 🟢 3.125 BTC
+
+	- Plus: All transaction fees from that block
+
+-> The reward halves every 210,000 blocks (~every 4 years) in what’s called the Bitcoin halving.
+
+-> In Proof of Stake (PoS)
+
+-> There’s no guessing or hash race.
+
+-> Validators are randomly selected to propose a block (Depending on how much You stake, you are picked that way).
+
+	- They just build the block (collect transactions, reference the previous block, sign it).
+
+	- Other validators then verify it.
+
+-> Transaction Pool is where transactions are waiting before being added to a block.
+
+-> Its Turing Complete: Meaning it can solve, any computation given enough time.
+
+-> A full node is a computer running Ethereum software (like Geth, Nethermind, or Besu) that:
+
+	- Stores the entire blockchain, and
+	- Verifies every transaction and block itself.
+
+	- In simple terms, it’s like having your own copy of Ethereum, and checking every single rule personally — instead of trusting anyone else.
+
+-> Every Full node runs all smart contract code, and does all calculations, and stores the entire chain's data.
+
+
+	--- KEY TAKEAWAYS ---
+
+	- Smart Contracts are Running on Block Chain.
+
+	- They are turing complete
+
+	- Deployment is done with a transaction.
+

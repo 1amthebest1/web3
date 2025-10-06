@@ -1,0 +1,5 @@
+-> read operations on remix are navy color, and red or orange are write operations.
+
+-> each transaction has its own unique hash.
+
+-> fallback functions are those functions, which are like safety net, if nothing else runs, run me. 
