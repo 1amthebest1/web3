@@ -1,0 +1,5 @@
+-> In Solidity 0 doesn't mean false, it does some conversions between 0, to booleans and ends up giving true.
+
+	- The instructor is using version 0.8.14, so might be a thing in that, since i cannot recreate it.
+
+-> bool public myBool; //default value is false.
