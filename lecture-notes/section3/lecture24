@@ -1,0 +1,49 @@
+-> Ephemeral means temporary
+
+-> functions with (data-type memory name), are given temporary memory till execution, and then are gone, i guess something like heap?
+
+-> In Solidity, there are 3 main memory locations, [ Storage, Memory, Stack ]
+
+---
+Storage
+---
+	-> Stored Permanenty on the chain.
+	-> State variables (declared outside any function).
+	-> Persists between function calls, and transactions.
+	-> Costs Gas to read, and write.
+
+---
+Memory
+---
+
+	-> Temporarily allocated in memory during execution.
+	-> Function arguments, or local variables declared with memory.
+	-> Exists only when function is executing, then is destroyed.
+	-> like Heap (But Solidity doesn't have a true heap), Instead, the EVM has a “scratchpad” area called memory that resets to empty every time a function executes.
+
+---
+Stack
+---
+
+	-> Fast-access register-like space.
+	-> Used for small local variables like uint, address.
+	-> Also Destroyed after function execution.
+	-> Max 1024 slots per EVM.
+
+---
+
+-> A view function in Solidity is a function that reads data from the blockchain, but does not modify it.
+
+-> String is a dynamically sized array of bytes, thus it cannot be used for something like keccak256.
+
+-> keccask hash is used in Ethereum to create a unique fingerprint of data, ID's, POW, and other.
+
+---
+bytes
+--- 
+
+	-> Strings are technically Bytes, but you see byte representation in getter function.
+	-> also support functions like .length().
+	-> Strings however uses UTF8.
+	-> The weird german charachters use 2 bytes in length.
+	-> That's why strings are not recommended.

@@ -34,7 +34,7 @@ binary numbers used for signed integers (in nearly all modern computers and prog
 Solidity also allows unsigned integers in steps of 8 bits: 2^8, 2^16, 2^24 ...
 ---
 
--> Pervious versions of solidity(before 0.8.14) reverted back to 0, after exceeding its max, this however stays till max.
+-> Pervious versions of solidity(before 0.8.14) reverted back to 0 (rolling over), after exceeding its max, this however stays till max.
 
 -> For example when uint8, tries to increment to 255, you should see an error, and its value stays at 255.
 
