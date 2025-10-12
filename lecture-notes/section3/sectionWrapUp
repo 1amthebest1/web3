@@ -1,0 +1,74 @@
+---
+WRAP UP
+---
+
+Value types
+
+	- Bool
+	- Int / Uint
+	- Address //wallet address etc
+	- String
+-
+All variables are initialized by default
+-
+	- There is no null, undefined.
+
+	- There are initialized as follows
+
+		U(int)=0
+		Bool=false
+		String=""
+
+Public variables generate a getter with a name of the variable, so you can't create a function
+with the same name as the name of the variabel.
+
+-
+There are no floats in solidity
+-
+
+Bool
+
+	can be true or false.
+	bool myVar
+	
+	support logical operators such as, "or", "and", ||, &&
+
+---
+
+Uint8 from 0 to 255.
+
+int8 from -128, 127.
+
+2**8, is 2 power 8.
+
+uint is an alias for uint256, which is 256 bit long
+
+---
+
+Automatic wrap around for unchecked values
+
+---
+
+There are no floats, and doubles, instead it uses a scale for example scale 100 theoretical representation of 3.23 as 323
+
+	-> Its to avoid dicrepancy in calculation by nodes
+
+---
+
+Floats use 18 decimal places via scale 18
+
+---
+
+Address: Every interaction in ethereum is address based, used to send ether.
+
+  -> has property called balance, that gives the balance in WEI.
+
+---
+
+String and Bytes are both special arrays, string is equal to bytes, but doesn't have length or index access
+
+-> Bytes for arbitrary length data, string for UTF-8 data.
+
+---
+
+Bytes store non-human readable data, string store human readable data [By-Convention]

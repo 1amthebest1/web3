@@ -1,0 +1,6 @@
+---
+CONSTRUCTORS
+---
+
+constructor(address _someAddress){} //address is something like wallet address, address payable has more functions, like it can transfer ether.
+

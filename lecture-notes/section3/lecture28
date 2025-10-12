@@ -1,0 +1,1 @@
+msg.sender contains the address of the entity that called the function, whether it be the address of another contract or a wallet address.

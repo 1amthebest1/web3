@@ -1,5 +1,5 @@
 -> Address types are storing 20 bytes[40 bits] of Ethereum address, basic address type called address stores address of like a wallet or contract address.
-
+(address public myAddress)
 -> Address payable special version of address that can send and receive Ether.
-
+(address payable public myAddress)
 -> 1 ETH=10^18 WEI.
