@@ -1,0 +1,33 @@
+[BEHIND THE SCENES] MetaMask
+
+MetaMask <---> Infura <---> Blockchain Node <---> Blockchain 
+   
+   ^                           ^
+   |                           |
+   |			       |
+   |---------------------------|
+   RPC [Remote Procedural Call]
+
+
+====
+Send crypto
+Your wallet builds a signed transaction and sends it to a node via RPC → the node broadcasts it → miners/validators confirm it.
+====
+
+Miners select transactions before they find the block,
+and everyone validates them after the block is found.
+
+====
+
+Nodes are pieces of software running the etherium protocol, this protocol allows
+nodes to sync the data, and the underlying block-chain data, chained together with the
+hash of the previous block.
+
+====
+KEY TAKE-AWAYS
+====
+
+- You need a Blockchain node to interact with the Blockchain.
+- Blockchain is the single source of truth.
+- There are infrastructure provides like infura, that abstract running Blockchains for you
+
