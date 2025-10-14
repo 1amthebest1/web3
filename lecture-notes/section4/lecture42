@@ -1,0 +1,56 @@
+===
+ETHEREUM TRANSACTION
+===
+
+web3.eth.sendTransaction(transactionObject,[callback])
+
+-> transactionObject is a Javascript Object
+
+	{
+	  from: //This is the address of the sending account
+	  to: //This is the destnination address
+	  value: //This is the value transferred in transaction(curency is WEI)
+	  basefee: //This gets burned
+	  priority fee: //This goes to miners
+	  data:
+	  nonce: //Number of Transactions already sent in the network.
+	
+	}
+
+
+-> If you don't send to field, the data field must be populated, because its contract deployment then. //Verify This
+
+---
+
+How does the Blockchain know a transaction is not malicious?
+
+IN OTHER WORDS
+
+How does the Blockchain know its allowed to transfer value from one account to other?
+
+Answer: Create a Signature.
+
+web3.eth.signTransaction(transactionObject, address [callback])
+
+---
+
+Transaction gets signed via Private Key, the public key is used to create accounts, using the last 20 bytes after ESAC hash
+
+---
+
+Transaction --------|
+		    + --------> Signed Transaction (r, s , v)
+Private Key --------|
+     |
+     |
+     |  ECDSA
+     |-----------> Public Key --------->Ethereum Account
+ 
+
+---
+
+ECRECOVER takes rsv values + transaction details, and can recreate ethereum account.
+
+---
+
+The Seed Phrase, runs through some kind of algorithm to create private, public, and Ethereum accounts
