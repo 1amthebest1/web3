@@ -1,0 +1,94 @@
+
+-> Seed phrase is for meta-mask wallet, a single seed phrase can create multiple accounts.
+
+-> Transfer between accounts failed for some reason error [NaN].
+
+--------
+Transaction Details on Etherscan
+--------
+	
+	- Transaction Hash: (unique hash for every transaction, with which you can identify transaction with).
+	- Status: Success.
+	- Block: "some number" (every time a block is created, it gets added to the chain).
+	- Timestamp: Time of transaction (when the new block was created and the transaction went through).
+	- From: From Address.
+	- To: To Address.
+	- Value: The amount
+	- Transaction Fee: The transaction fee.
+	- Nonce: The number of transactions send on block chain, nonce 1, means 2 transactions on the block-chain.
+-> Transaction Fee = Gas Units Used * Price per Gas Unit
+
+-> The Transaction fee gets deducted from the account sending the tokens, and its native to the network, for Etherium its eth, also referred to a "Gas Token".
+
+
+
+--------
+
+✅ Ethereum test networks (testnets) are indeed separate blockchains, but they are designed to replicate the Ethereum mainnet’s functionality as closely as possible.
+
+Here’s the key idea:
+
+🧩 Relationship to Mainnet
+
+Testnets run the same Ethereum protocol and EVM (Ethereum Virtual Machine) as the mainnet.
+
+However, they have different chain IDs, different native tokens, and separate states — meaning balances, contracts, and transactions on a testnet do not exist on mainnet.
+
+They are completely isolated networks — but designed to simulate mainnet behavior for development and testing.
+
+--------
+
+💡 A single blockchain (like Ethereum) supports all tokens.
+Each token does not have its own blockchain — instead, every token is implemented as a smart contract on top of the same Ethereum blockchain.
+
+--------
+
+🪙 2. Tokens live inside Ethereum as smart contracts
+
+A token (like USDT, DAI, SHIB, LINK, etc.) is just a smart contract deployed on Ethereum.
+
+These contracts follow standard interfaces like:
+
+ERC-20 → for fungible tokens (currencies, governance tokens)
+
+ERC-721 → for NFTs
+
+ERC-1155 → for mixed-type assets (both fungible & non-fungible)
+
+Each token contract defines:
+
+How many tokens exist
+
+Who owns what
+
+How transfers work
+
+Example:
+When you “send” 10 USDT to someone, the USDT smart contract updates its internal balance records — no new blockchain or coin is created.
+
+--------
+
+If you want your token to behave like other tokens on Ethereum,
+you must implement these specific functions and behaviors, such as USDT, shib etc.
+
+--------
+
+DeFi = Decentralized Finance
+It’s the financial system built on blockchains (like Ethereum) that runs without banks, brokers, or centralized intermediaries.
+
+--------
+
+If you send a transaction with a really low gas fees, and you next transaction has high gas fees, it wouldn't get mined until the previous one finishes.
+
+--------
+
+Each block has:
+
+A maximum gas capacity (e.g., in Ethereum ~30 million gas).
+
+So if total pending transactions need 60 million gas, only half can fit in the next block.
+
+The rest wait in the mempool for later blocks — or may be ignored forever if the fee is too low.
+
+--------
+
