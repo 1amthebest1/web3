@@ -1,0 +1,34 @@
+contract Example {
+    function greet(string calldata name) external pure returns (string calldata) {
+        return name; // read-only access
+    }
+}
+
+- Function with external, can only be called from outside the contract's code.
+
+- Call data = the information you send to a smart contract function when you call it.
+
+call data is not stored in RAM (memory).
+It’s stored in a separate read-only area of the EVM (Ethereum Virtual Machine) called the call data section.
+
+
+Function Type		Callable From							Notes
+external		Outside contract only (this or transactions)			Uses calldata (read-only, cheaper), uses calldatasection of EVM
+public			Inside + Outside						Copies data into memory (slightly higher gas)
+internal		Only inside contract or inherited ones				Uses memory
+private			Only inside same contract					Uses memory
+
+
+---
+storage: On Block-Chain
+
+memory: Temporary inside function.
+
+calldata: Call data section.
+---
+
+Reading calls don't get mined, the node reads from the block-chain, and sends the data back.
+
+---
+
+A contract (or chain of contracts) can’t go deeper than 1024 nested calls in a single execution.

@@ -1,0 +1,19 @@
+Gas-Price Auction: The higher the gas price, the more likely it gets mined.
+
+If you send the transaction with the same nonce (counter that indicates which transaction number the transaction is), it replaces the existing transaction.
+
+To Speed up the transaction you send the transaction with the nonce you want to replace, with a higher gas fee.
+
+To Cancel the transaction you send the transaction with the same nonce, but you [send no data + to]=from.
+
+The old transaction stays the mem pool as well, but you send a send a new transaction that gets mined faster, invalidating the nonce of the previous transaction
+
+Sending a transaction with a high gas amount, after a pending transaction with lower gas amount will not go through, since the previous has not been yet completed.
+
+This is because you cannot jump a number in nonce.
+
+if you send the transaction to yourself with the SAME NONCE, you will cancel it; you send 0 ETH to yourself.
+
+---
+
+Cancel transactions with higher nonce first, because if you cancel earlier transactions its going to mine the transactions with higher nonce automatically.
