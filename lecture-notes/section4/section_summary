@@ -1,0 +1,77 @@
+Writing Transaction: Writing Transaction means it needs an actual transaction that is mined.
+
+Reading Transaction: Reading Transaction is actually called a call, and that is only against your local Blockchain node, not broadcasted, and mined.
+
+	- Everyone in the network has a copy of the blockchain, so the transaction doesn't need to be mined.
+
+---
+View Function: Reading from the State[all the data stored permanently on the blockchain by a smart contract.] and from other view functions.
+---
+
+---
+Pure Functions: Not Reading, or modifying the state, it reads from arguments, and other pure functions.
+---
+
+====
+Function Visibility
+====
+
+Public: Can be called externally and internally.
+
+Private: Only for the contract, not externally reachable and not via derived contracts.
+
+---
+External: 
+	- Can be called from other contracts.
+	- Can be called externally.
+	- A contract cannot calls its own external function but, it can call it using this. (which performs an external call to itself).
+---
+
+Internal: Only for the contract itself, and its derived contracts, can't be invoked by a transacion externally.
+
+---
+Constructor
+---
+
+A function with the name constructor()
+
+Called only during deployment, can't be called afterwards, is either public or internal.
+
+============================
+
+A function with the name "fallback() external [payable]" to receive calldata.
+
+A function with the name "receive() external payable" to receive value, without calldata.
+
+-> Called when the transaction with a wrong function signature is sent to the smart contract. 
+
+-> Can only be external.
+
+============================
+
+Contracts receiving Ether without a fallback function, and without a function call will throw an exception.
+
+============================
+
+You cannot completely avoid receiving Ether
+
+- miner reward, or selfdestruct(address) will forcefully credit ether.
+
+===========================
+
+Forcefully prevent contract execution if called with contract data
+
+require(msg.data.length==0);
+
+//To learn [miner reward, selfdestruct(), _contractAddress.transfer()]
+
+===========================
+
+Msg.Value and address
+
+	- global msg-object contains a value property(in wei).
+
+	- Address type variables have a balance (address X=0123...X.balance)
+	- Address-type variable can be payable (address payable x).
+	- Payable address can receive a value (x.transer(wei))
+	- The contract itself can have a balance (address(this).balance)

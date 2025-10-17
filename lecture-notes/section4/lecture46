@@ -9,3 +9,24 @@
 -> If there is no data, if there is just a value transfer without any kind of data, it hits a recieve function, when there is data, it needs a fallback function.
 
 -> If there is value being sent, without data, it will call the fallback function in the absence of a receive function.
+
+---
+This is specially coded to make the EVM understand, what we want to do.
+
+0x37e2f60c0000000000000000000000000000000000000000000000000000000000000001
+
+first 4 bytes i.e first 8 hex charachters after the 0x are the function signature, the function identifier which tells the EVM what function to call.
+
+It takes the function name, and the data-type of parameter, and ksac hashes it
+
+"setmyUint(uint256)"
+
+web3.utils.sha3("setmyUint(uint256)");
+
+0x37e2f60c1f8e5cbed2a94ba206e1fbce281744bc0a53ee761bbef8fc2f9fad6b
+
+The EVM takes the first 8 bytes, then ignores the rest.
+
+The first 8 bytes of the hex number after the 0x is what is used to identify the function which you want to call.
+
+---
