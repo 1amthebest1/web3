@@ -1,0 +1,11 @@
+-> By default smart contracts cannot receive anything.
+
+-> To recieve ether transfer the contract should have either 'receive' or 'payable' fallback function.
+
+-> A receive function is a function that can recieve ether.
+
+-> When ETH is sent via .transfer(), or .send(), the EVM limits the gas sent to the contract to 2300 gas, for security safety
+
+-> If there is no data, if there is just a value transfer without any kind of data, it hits a recieve function, when there is data, it needs a fallback function.
+
+-> If there is value being sent, without data, it will call the fallback function in the absence of a receive function.

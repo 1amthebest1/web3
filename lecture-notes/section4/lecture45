@@ -1,0 +1,5 @@
+-> payable functions means, they can receive ETH.
+
+-> msg.sender, is the address of the sender
+
+-> msg.value is the amount of eth sent to the smart contract.
