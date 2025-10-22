@@ -1,0 +1,10 @@
+-> Each block has its gas limit.
+
+	- ≈ 30 million gas per block
+
+-> So miner does POS, finds new blocks, selects transactions with highest GAS fees, calculates them, broadcasts the results, the result gets validated, then pushed. 
+   The targeted time for [calculating, verifying them and pushing] is 12 seconds. 
+   New block will not get mined, until the transactions selected by the winner are completed. 
+   Complex transactions maybe reverted, as they may exceed block gas limit.
+
+-> When a function is payable and modifies state, it does not return data on-chain (it’s a transaction, not a call), and EVM discards the data of the return.
