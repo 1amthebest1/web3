@@ -1,0 +1,27 @@
+- Mappings give out default value, when nothing is stored there.
+- So it does not mean that false occupied memory or something.
+
+	-> Is not like a vector or array.
+
+	-> Has no preallocated memory.
+
+	-> Returns default values for unset keys.
+
+----
+
+- EVM's memory [storage (data of smart contract that gets stored on the blockchain)], is stored 2^256 keys, each of which map to a 32 byte (8*32 bits)
+
+- The hash-function finds address of keys for storage data.
+
+==
+	Let’s say you have: mapping(bool => uint) myMap;
+	and this variable is declared at storage slot 1
+	
+	Now, in EVM terms:
+			
+			- Slot 1 doesn’t hold any mapping data.
+
+			- Slot 1 is just the “identifier” (or seed slot) for this mapping.	
+
+==
+	EVM pads the unused bits in memory to 0.
