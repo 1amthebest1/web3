@@ -1,0 +1,8 @@
+- when you compile the .sol file, if the object of another contract is being used, the contract's byte code gets embedded to the contract calling it
+
+- assert doesn't have error message.
+
+- you can create custom errors, and catch them, and emit their byte code
+
+- syntax is error customError(string), there is logging via event myEventname(datatype varname), which you can call via emit myEventname()
+

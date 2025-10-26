@@ -1,0 +1,6 @@
+- when assert fails, it calls panic op code, which eats up all the gas
+
+- assert is basically used to ensure the correct data types are used [checks internal errors], to stop bugs such as roll-over issues.
+
+- assert() is meant to test for invariants — conditions that should always be true.
+- If an assert() fails, it indicates a bug in the code (not just bad user input).
