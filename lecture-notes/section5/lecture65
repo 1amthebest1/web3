@@ -1,0 +1,9 @@
+require(somecheck,"error")
+
+- if the check fails, it outputs the string in this case.
+
+- During compile time, the require is actually changed to revert() //look more into this
+
+- If the require fails, the transaction becomes as if it was never initiated.
+
+- require(), sends back the remaining gas, if it fails.
