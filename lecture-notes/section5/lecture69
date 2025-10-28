@@ -1,0 +1,12 @@
+- EAO, externally owned account, having a private key. It represents a person.
+
+- The 2300 gas is sent to the reciever to execute simple logic, and maybe fallback functions. [only if its a smart contract], EOA don't get gas.
+
+Feature		|   .transfer()		|	.send()
+Gas forwarded	|   2300 gas		|	2300 gas
+On failure	|   Reverts transaction	|	Returns false [but transaction does not revert, you see the ✅]
+Return value	|   None		|	bool
+Introduced	|   Solidity 0.4.13	|	Solidity 0.4.0
+Recommended	|   Safer (auto revert)	|	⚠️ Use only if handling failures manually
+
+- The require(some condition, some string) will output the string, if the condition is false 
