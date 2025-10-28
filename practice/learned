@@ -8,3 +8,9 @@
    Complex transactions maybe reverted, as they may exceed block gas limit.
 
 -> When a function is payable and modifies state, it does not return data on-chain (it’s a transaction, not a call), and EVM discards the data of the return.
+
+-> Gas: Max gas limit set by Remix.
+
+-> Transaction Cost: Total Gas Used [Real Cost] {Includes storage costs, Includes DeploymentOverhead}
+
+-> Execution Cost: Only code execution (pure EVM opcodes).
