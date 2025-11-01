@@ -1,0 +1,28 @@
+
+- web3 JS allows you to talk to the block chain
+
+- web3 JS is a javascript library that allows you to do RPC calls via, something like a nodeJS app, or your browser.
+
+- It does not get mined or something.
+
+- When you compile a solidity contract, the compiler produces two main outputs, bytecode for the EVM to run, and an ABI
+
+- ABI is basically JSON data, that shows information about the functions, and variables.
+
+- if we use metamask, for web3, we are communicating with the node that metamask uses for RPC calls [default {infura}].
+
+- The keyword async before a function makes the function return a promise
+
+- promises, have a resolve, and a reject, which you can use via chaining with a .then()
+
+=====
+
+The get balance function, returns a promise, like fetch()
+
+web3.eth.getBalance(accounts[0])
+  .then(value => console.log(value))
+  .catch(err => console.error(err));
+
+=====
+
+

@@ -10,3 +10,26 @@ Introduced	|   Solidity 0.4.13	|	Solidity 0.4.0
 Recommended	|   Safer (auto revert)	|	⚠️ Use only if handling failures manually
 
 - The require(some condition, some string) will output the string, if the condition is false 
+
+- If a smart contract calling another smart contract, the other smart contract fails for some reasons, the one that called it will also fail,
+  except for level functions like address.send, address.call, address.delegatecall, address.staticcall
+
+- Revert operation (0xfd) [returns remaining gas]
+
+- Assert is a panic (0xfe), something went wrong at compiler level i guess? [consume all gas] {Invariants: states the smart contract should never be in}
+
+- Assert is triggered when
+
+	- Out of bounds index
+	- Division by zero or module zero (5/0, 23%0)
+	- Convert a value too big, or negative to enum
+	- Byteshifting by a negative amount
+	- Zero-initalized variable of internal function
+	- Or assert(X) where X evaluates to false
+
+- A contract cannot work without being called first by an EOA.
+
+====
+
+- All information is public.
+- Ethers are not stored in the your wallet, but one the blockchain.

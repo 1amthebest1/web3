@@ -1,0 +1,12 @@
+
+Requirements:
+
+-> Wallet has one owner
+
+-> Receive funds with a fallback function
+
+-> Spend money on EOA, and contracts
+
+-> Allowance [Allow Certain people to spend a certain amount of funds]
+
+-> Set a new owner with 3-out-of-5 guardians [So if the owner loses private key, there should be some sort of recovery functionality]
