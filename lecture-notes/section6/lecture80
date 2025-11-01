@@ -1,0 +1,7 @@
+- The debugger stops highlighting the code at certain parts.
+
+- A specific OP code is highlighted at a specific step.
+
+- PUSH4, means push 4 bytes [8 hex chars].
+
+//we wrote js code that gets accounts, and does a transaction

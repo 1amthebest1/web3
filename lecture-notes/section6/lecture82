@@ -1,0 +1,18 @@
+
+- The return variables are not written on the Blockchain, only for inter-smart contract [inside smart contracts]
+
+	{
+	 Return variables (i.e. values returned by functions) are not stored on the blockchain. 
+	 They only exist temporarily in memory during a transaction or call. Once execution finishes, the EVM discards them.
+	}
+
+- That's why we have Events.
+
+
+- Events are recorded on the blockchain as transaction logs (permanent, verifiable), 
+  but they are not stored in contract storage and cannot be accessed by smart contracts themselves — only by off-chain tools.
+
+
+- If transactions are rolled back, the event does not get sent.
+
+
