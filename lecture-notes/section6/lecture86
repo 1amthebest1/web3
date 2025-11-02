@@ -1,0 +1,22 @@
+
+- EVM has loggin functionality, via events, however they are only accessible outside the blockchain, even though they are stored in the chain.
+
+- Used for return values from transactions.
+
+- Used as a cheap data storage.
+
+- Functions / transactions return a "transaction hash", not return values, which are observable only in remix.
+
+- when something like require fails, the EVM returns an encoded error message, not the event.
+
+- storing data on block-chain as storage variables is expensive, so you can store it via an event, or have a DB on your website, with transaction hash etc.
+
+- Events cannot be accessed within a smart contract.
+
+- you need 640,000 gas per KB of data storage.
+
+- you are limited by gas?, which doesn't even allow to store a MB of data on a contract.
+
+- Storing via events on the blockchain costs, 8192 gas per KB.
+
+
