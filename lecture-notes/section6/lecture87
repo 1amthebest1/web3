@@ -1,0 +1,28 @@
+
+- modifiers injects code, i.e 
+
+	//some check, or code of modifier, such as require()
+	//-;  //rest of the code of the function that is using the modifier
+
+
+- syntax
+
+	modifier onlyOwner {
+		
+		require(msg.sender==owner);
+		_;
+		
+	}
+
+- The compiler takes the content of the function and puts it at _; of the modifier, and then put everything back into the function itself.
+
+- To reuse functionality of a smart contract, that can be used by another smart contract, we have "Inheritance".
+
+- You say that this smart contract has a base (parent) smart contract, its syntax is 
+
+	
+	childSmartContract is ParentSmartContract{
+		
+	}
+
+- You create the parent in another file, and then import it from the path, to shorten the file size. The compiler handles the inclusion of the parent Contract by itself.
