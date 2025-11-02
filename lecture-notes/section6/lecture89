@@ -1,0 +1,65 @@
+
+- There is function overloading in solidity.
+
+- using objects of class, you call the function via the dot operator i.e object.function();
+
+- 🧩 virtual
+
+  Declared in the parent contract.
+
+  It means: “This function can be replaced (overridden) by a child contract.”
+
+  If a function is not marked virtual, you cannot legally redefine it in a derived contract.
+
+
+- override
+
+ Declared in the derived contract.
+
+ It means: “This function replaces a virtual function inherited from a parent.”
+
+ Solidity requires override explicitly to prevent unintentional overrides (which were common in older Solidity versions).
+
+----
+
+you can also deploy smart contracts via the new keyword.
+
+such as Animal animal = new Dog(); deploys a contract of Dog, and stores its address in animal
+
+- Animal doesn’t need to have an address member manually — Solidity handles that internally, its like a pointer to a contract.
+
+____
+
+multiple inheritance syntax
+
+- contract child is GrandFather, Father {}
+----
+
+You can access the parent contract using the "super" keyword.
+
+----
+
+You only deploy the child contract, everything gets put in one byte code.
+
+----
+
+"virtual" defines parent functions that are allowed to be overridden by child contracts.
+
+----
+
+"override" defines function that are overriding a function of base contract.
+
+----
+
+A function can obviously be both override and virtual.
+
+--- 
+---
+
+Imports
+
+	- import "filename"
+
+	- import * as symbolName from "filename" //when you have mulitple contracts
+
+	- import {onecontract as renamed, secondcontract} from "file"
