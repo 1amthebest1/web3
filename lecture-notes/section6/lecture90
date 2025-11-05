@@ -1,0 +1,6 @@
+
+-> 1e18 means 1 to the power of 18.
+
+-> much like ether, gwei, and wei, we have units like days available in solidity, so you don't need to manually convert them.
+
+-> much like days, we have seconds, minutes, hours, days, weeks.
