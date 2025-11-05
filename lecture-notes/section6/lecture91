@@ -1,0 +1,20 @@
+
+-> data on the block chain stays forever
+
+-> but state is modifiable, so you can change current state, overwritting the data.
+
+-> however everything of past stays on the chain.
+
+-> selfdestruct() function is interesting...
+
+-> selfdestruct function has a "payable address", as argument, which sends all the money of the smart contract to that address.
+
+-> so its necassary to use some control structure like modifier onlyOwner{}, to create Access-Control.
+
+-> once you call the selfDestruct function, you cannot call any function again to get your eth back, so it can create dangers such as the smart contract would be able to recieve money but not send it back.
+
+-> The contract address after the selfDestruct function cannot run any other code. it gets cooked.
+
+-> you can still send it money, but the contract will not run any other code.
+
+-> THERE IS ALSO WAY TO REDEPLOY CONTRACTS TO THE SAME ADDRESS!!!
