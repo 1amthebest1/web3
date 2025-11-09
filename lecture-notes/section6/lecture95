@@ -1,0 +1,35 @@
+RFC: Request For Comments, [Proposing an improvement/new-idea, if accepted becomes standard for something]
+
+- OpenZeppelin provides a good way in generating smart-contracts that allow you to create ERC20 tokens.
+
+- you can implement Access-Control via
+
+	- GRANT_ROLE(DEFAULT_ADMIN_ROLE, msg.sender)
+
+- you implement it such as function somename() public onlyRole(DEFAULT_ADMIN_ROLE){}
+
+- ledger is a digital notebook/transaction record.
+
+- A ledger is a record of transactions. 
+  In crypto, it’s a distributed, tamper-proof record of who owns what, often maintained by every participant in the network.
+
+- MetaMask is your wallet, Uniswap is the marketplace. 
+  You use MetaMask to hold and authorize tokens; you use Uniswap to swap or provide liquidity for tokens.
+
+====
+
+- In Solidity, the abstract keyword is used to define a contract that cannot be deployed on its own because it has incomplete functions.
+
+
+- To deploy a contract, you must use the new keyword.
+
+- Declaring a contract type like BaseContract obj; does not deploy anything — it just declares a variable that can hold the address of a deployed contract.
+
+====
+
+- It’s telling Solidity: “Here’s an address of an ERC20 contract — treat it as an ERC20 instance so I can call its functions.” 
+- It doesn’t create a new contract, just lets you interact with the existing one.
+
+====
+
+- Ethereum Request For Comments (ERC)
