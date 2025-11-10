@@ -1,0 +1,13 @@
+
+-> AMM [Automated Market Maker].
+
+-> Allows traders to buy, and sell tokens after calculating its price, of liquidity and number of tokens.
+
+-> So basically its demand and supply, more coins, and less money backing it up means, the coins will be cheaper
+
+-> amount of coins x money backing it up = constant
+ 
+   if money is more for less number of coins, the coins become expensive to maintain the constant.
+
+-> How much tokens to give => Constant / money given by buyer = tokens there should be. 
+   tokens to give = So number of tokens before buying - tokens there should be. 

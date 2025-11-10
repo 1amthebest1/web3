@@ -1,0 +1,19 @@
+
+- Fungible means interchangeable, like ether and fiat, money and gold.
+
+- In a nutshell, when dealing with non-fungibles (like your house) you care about which ones you have, 
+while in fungible assets (like your bank account statement) what matters is how much you have.
+
+- pause() function pauses operations, such as token transfer, or minting new tokens
+
+
+- Construct Transaction [nonce, gasPrice, gasLimit, to(contract address), value, data, chainId]
+ -> RLP encode (unsigned) -> kessac_hash(RLP encoded (unsigned))
+ -> sign (kessac_hash) -> Construct Transaction [nonce, gasPrice, gasLimit, to(contract address), value, data, chainId]
+ -> RLP encode(signed) -> RPC call. 
+
+- In Solidity, address(0) means “the zero address” — it’s a special address value with all bits set to zero.
+
+ -> 0x0000000000000000000000000000000000000000
+
+- pure functions don't read from the state.
