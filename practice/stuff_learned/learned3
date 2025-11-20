@@ -1,0 +1,59 @@
+
+- Functions of a standard ERC721
+
+balanceOf(address owner) //returns how many NFT's an owner has.
+ownerOf(uint256 tokenId) //returns the owner of a specific NFT.
+
+transferFrom(address from, address to, uint256 tokenId) //transfers NFT, doesn't validate if reciever is a smart contract.
+
+safeTransferFrom(address from, address to, uint256 tokenId) //If to is a contract, it must implement IERC721Receiver Otherwise the transfer reverts, preventing NFTs from being lost inside contracts.
+
+approve(address to, uint256 tokenId) //allows another address to transfer a token in NFT owner's behalf
+
+getApproved(uint256 tokenId) → address Shows which address is approved to manage a specific NFT.
+
+setApprovalForAll(address operator, bool approved) Gives or removes approval for operator to manage all your NFTs.
+
+isApprovedForAll(address owner, address operator) → bool. Checks if operator is approved to manage all NFTs of owner.
+
+======
+
+Metadata Functions (Optional ERC-721 Metadata Extension)
+
+- name() → string. Returns the collection name (Example: “BoredApe”).
+
+- symbol() → string. Returns the collection symbol (Example: “BAYC”).
+
+- tokenURI(uint256 tokenId) → string. Returns metadata URL for each NFT.
+
+======
+
+Ownable Extension Functions (Not part of core ERC-721)
+
+- owner() → address. Returns the contract owner address.
+
+- transferOwnership(address newOwner). Moves ownership to a new owner.
+
+- renounceOwnership().
+
+======
+
+⏸️ Pausable Extension Functions
+These allow the owner to stop the contract during emergencies.
+
+- pause(). Pauses transfers/approvals.
+
+- unpause(). Unpauses the contract.
+
+======
+Minting & Burning
+
+- safeMint(address to, uint256 tokenId / or auto-id). Creates (mints) a new NFT to the address to.
+
+- burn(uint256 tokenId). Destroys an NFT permanently.
+
+======
+
+When a contract uses Ownable (usually from OpenZeppelin), it means:
+
+The contract has one special address called the owner.

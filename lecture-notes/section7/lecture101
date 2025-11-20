@@ -1,0 +1,42 @@
+- EIP721: Standard Interface for Non-Fungible Tokens, also known as deeds.
+
+- Big misconception: Metadata for NFT's is immutable.
+
+- NFT meta-data, is file description that tells what the NFT actually is.
+
+======================	
+
+	Name: Title of the NFT. eg {Crypto-Punk}
+	Description: Human-Readable explanation of the NFT. lore, story, traits, whatever the creator wants.
+	Image/Media url: Usually stored off chain.
+	
+- Attributes / Traits
+
+- A set of key–value pairs describing the NFT’s features, often used in collectible projects:
+
+	[
+		 {"trait_type": "Background", "value": "Blue"},
+		 {"trait_type": "Eyes", "value": "Laser"},
+		 {"trait_type": "Rarity", "value": "Legendary"}
+	]
+
+- Animation / Video links.
+
+======================
+
+- Each NFT is an entry (token ID + owner) inside a deployed ERC-721 contract, and its properties/attributes are defined in a metadata file, not in the contract.
+
+- Many NFTs are not as immutable as people assume.
+
+- The ownership is immutable, but the meaning of what you own can be altered by the project owner unless the system was designed correctly.
+
+======================
+
+- Token ID
+	
+	- Token ID is defined as uint256 inside the ERC721, which shall NOT change for the life of contract.
+	
+	- Its globally unique, and fully qualified Identifier for the asset.
+	
+	- It would be obviously convenient for the Dev to start the TokenID with zero, and increment it. BUT the callers should not assume that a number has a pattern etc, and should be black box. 
+
