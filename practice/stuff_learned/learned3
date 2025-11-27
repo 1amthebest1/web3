@@ -57,3 +57,19 @@ Minting & Burning
 When a contract uses Ownable (usually from OpenZeppelin), it means:
 
 The contract has one special address called the owner.
+
+======
+
+
+State-changing function: return value is discarded on-chain.
+
+View/pure function [eth_call]: return value is visible off-chain because it never becomes a transaction.
+
+=====
+
+basically allocating space in memory for copy[]
+
+uint[] memory copy = new uint[](numbers.length);
+
+works only on storage arrays, not memory arrays, that's why you need to allocate space.
+-
