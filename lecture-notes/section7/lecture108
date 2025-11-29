@@ -1,0 +1,15 @@
+
+```
+const SMXnft = artifacts.require("SMXnft");
+
+module.exports= function (deployer, accounts, network){
+        deployer.deploy(SMXnft, "0xe1bDa0066b0008562019Cb13BAB1b1E7a3578A1d>
+        console.log( network,accounts);
+}
+```
+
+- you can also choose who deploys the smart contract via adding arguments in a JSON format, after the constructor arguments.
+
+- there is an option called {replace:true}, which is true by default, so the previous contract whose build/contract name is same gets replaced, when you deploy it via "truffle migrate"
+
+- basically in truffle-config.js, you create a new network by adding host("127.0.0.1"), port(8545), and network id which is random so its okay to add "*".
