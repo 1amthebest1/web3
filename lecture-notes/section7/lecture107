@@ -1,0 +1,28 @@
+
+- migrations are basically deployment, but called migrations
+
+- you start naming the files as 01-spacebear.js, so truffle knows in which order to compile. I am not sure this behaviour is correct and real though.
+
+- truffle goes through the migration files, imports the files and call the default function.
+
+- syntax: module.exports=functionName, OR module.exports=function(){}.
+
+- there's a function that has a deployer as argument, which basically deploys smart contracts.
+
+
+- function(deployer){
+	deployer.deploy(SpaceBear);
+}
+
+- truffle also comes with an internal blockchain!!!, just like remix.
+
+- deployer, Object injected by Truffle to handle deployments
+
+- Truffle compiles your Solidity files and puts the ABI + bytecode into that JSON file. Artifacts.require() reads that JSON and returns a contract abstraction that can be deployed.
+
+- you then do "truffle develop" which starts a blockchain, and it gives you a shell, which is connected to the blockchain.
+
+- then you type "migrate", which compiles your smart-contracts, and then deploys it.
+
+- so basically truffle is something that uses a simulated blockchain like ganache, truffle compiles the contract creates JSON details about the contract etc, and deploys it to the simulated blockchain called ganache.
+
