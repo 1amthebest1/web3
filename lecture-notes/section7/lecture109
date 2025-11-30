@@ -1,0 +1,10 @@
+
+"truffle console", this opens a JS interactive console that allows you to interact with the smart contracts.
+
+- "web3.eth.getAccounts();" displays the accounts
+
+	const SMEXinstance = await filename.deployed();
+	
+	SMEXinstance.method();
+
+- all writting transactions need to be resolved as a promise, since they get mined, and you are not sure when you get the output.
