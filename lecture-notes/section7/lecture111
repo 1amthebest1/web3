@@ -1,0 +1,5 @@
+
+- unit test: A unit test in Truffle / Ganache (and blockchain in general) is not a buzzword and it’s not magic. It’s simply a controlled, automated way to prove that one small piece of your smart contract behaves exactly as intended—and to catch bugs before they cost real money.
+
+
+- In Solidity, events are a way for smart contracts to log information to the blockchain that external applications (like frontends, scripts, or other contracts) can listen to. They are essentially messages emitted from the contract that are stored in the transaction logs, not in contract storage.
