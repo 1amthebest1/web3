@@ -1,0 +1,22 @@
+
+- global node packages get installed in /home/node/global/ where they sit as binaries and can be called from anywhere.
+
+- with truffle you can create something called truffle-contract in the truffle console, which i think might be using web3js under the hood, i am not sure.
+
+- In short you can use JS in truffle console, to interact with a deployed smart contract.
+
+===
+
+- In unit tests, the contract() function is a magic function that tests your smart contract, it doesn't interact with the existing smart contract, but it re-deploys it.
+
+- In unit tests, you can use different API's and all that such as chai, asserts etc.
+
+- If you have react in the same folder, it may use the .env file for its build, which may get pushed into the frontend
+
+===
+
+THE NEXT STEP AS A BLOCK-CHAIN DEV IS TO WRITE UNIT TESTS, TRYING TO BREAK SMART CONTRACTS LOCALLY, ALSO LEARN TRUFFLE DEBUG.
+
+===
+
+CONCLUSION: This is the thing to learn, which is going to be fun inshallah
